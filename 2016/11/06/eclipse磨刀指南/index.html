@@ -1,0 +1,350 @@
+
+ <!DOCTYPE HTML>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  
+    <title>eclipse磨刀指南.md | blog of dx5</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=3, minimum-scale=1">
+    
+    <meta name="author" content="dongjinglei">
+    
+    <meta name="description" content="前言俗话说的好，欲练神功，必先自宫…..啊，不是，是工欲善其事，必先利其器。对于整天敲代码的码农来说，一个趁手的IDE对提升自己写代码的速度是很有帮助的，今天我就总结一下我使用过的eclipse的一些较优的配置，至于你是否喜欢这样，这个就仁者见仁智者见智了，好了，话不多说，让我们来看一下都有哪些奇淫">
+    
+    
+    
+    
+    
+    <link rel="icon" href="/img/favicon.ico">
+    
+    
+    <link rel="apple-touch-icon" href="/img/pacman.jpg">
+    <link rel="apple-touch-icon-precomposed" href="/img/pacman.jpg">
+    
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+  <body>
+    <header>
+      <div>
+		
+			<div id="imglogo">
+				<a href="/"><img src="/img/logo.png" alt="blog of dx5" title="blog of dx5"/></a>
+			</div>
+			
+			<div id="textlogo">
+				<h1 class="site-name"><a href="/" title="blog of dx5">blog of dx5</a></h1>
+				<h2 class="blog-motto">It is not our abilities that show what we truly are,it is our choices.</h2>
+			</div>
+			<div class="navbar"><a class="navbutton navmobile" href="#" title="菜单">
+			</a></div>
+			<nav class="animated">
+				<ul>
+					
+						<li><a href="/">主页</a></li>
+					
+						<li><a href="/archives">归档</a></li>
+					
+						<li><a href="/">分类</a></li>
+					
+						<li><a href="/">关于</a></li>
+					
+					<li>
+					
+					<form class="search" action="//google.com/search" method="get" accept-charset="utf-8">
+						<label>Search</label>
+						<input type="text" id="search" name="q" autocomplete="off" maxlength="20" placeholder="搜索" />
+						<input type="hidden" name="q" value="site:dongjinglei.com">
+					</form>
+					
+					</li>
+				</ul>
+			</nav>			
+</div>
+
+    </header>
+    <div id="container">
+      <div id="main" class="post" itemscope itemprop="blogPost">
+	<article itemprop="articleBody"> 
+		<header class="article-info clearfix">
+  <h1 itemprop="name">
+    
+      <a href="/2016/11/06/eclipse磨刀指南/" title="eclipse磨刀指南.md" itemprop="url">eclipse磨刀指南.md</a>
+  </h1>
+  <p class="article-author">By
+    
+      <a href="http://dongjinglei.com" title="dongjinglei">dongjinglei</a>
+    </p>
+  <p class="article-time">
+    <time datetime="2016-11-06T11:02:20.000Z" itemprop="datePublished">2016-11-06</time>
+    更新日期:<time datetime="2016-11-06T13:03:33.579Z" itemprop="dateModified">2016-11-06</time>
+    
+  </p>
+</header>
+	<div class="article-content">
+		
+		
+		<div id="toc" class="toc-article">
+			<strong class="toc-title">文章目录</strong>
+		<ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#前言"><span class="toc-number">1.</span> <span class="toc-text">前言</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#设置篇"><span class="toc-number">2.</span> <span class="toc-text">设置篇</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#快键键篇"><span class="toc-number">3.</span> <span class="toc-text">快键键篇</span></a></li></ol>
+		</div>
+		
+		<h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>俗话说的好，欲练神功，必先自宫…..啊，不是，是工欲善其事，必先利其器。对于整天敲代码的码农来说，一个趁手的IDE对提升自己写代码的速度是很有帮助的，今天我就总结一下我使用过的eclipse的一些较优的配置，至于你是否喜欢这样，这个就仁者见仁智者见智了，好了，话不多说，让我们来看一下都有哪些奇淫巧技。</p>
+<h3 id="设置篇"><a href="#设置篇" class="headerlink" title="设置篇"></a>设置篇</h3><ol>
+<li><p>代码自动提示<br><br>Java的类和方法很多，有些并不常用的我们很难记住它的名字，eclipse的代码提示是个好东西，但是也有不方便的地方，就是只有输入”.”才会跳出提示框。但是eclipse允许你对这个规则进行修改。在<em>Window -&gt; Preferences -&gt; Java -&gt; Editor -&gt; Content Assist -&gt; Auto Activation</em>中，修改如下项：<br><br>delay是自动弹出提示框的延迟时间，我们把它设为100ms；<br><br>triggers这里默认是”.”只要加上”abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ”,就可以实现输入什么字母都提示了。</p>
+</li>
+<li><p>设置代码的字体类型和大小<br><br>Window -&gt; Preferences -&gt; General -&gt; Appearance -&gt; Content Assist -&gt; Colors and Fornts。这个一般大家都会修改一下，毕竟默认的字体有点小了，字体类型这里推荐一下Yahei Consolas，微软雅黑的中文+consola的英文，看起来十分舒服</p>
+</li>
+<li>设置文本文件及JSP文件编码<br><br>Window -&gt; Preferences -&gt; General -&gt; Workspace -&gt; Text file encoding -&gt; Other：<br><br>Window -&gt; Preferences -&gt; Web -&gt; JSP Files -&gt; Text file encoding-&gt; Other：<br><br>我的话一般会选择把编码格式设置为utf-8，可能是因为总是做web项目吧<h3 id="快键键篇"><a href="#快键键篇" class="headerlink" title="快键键篇"></a>快键键篇</h3>对于快捷键，首先所有快捷键都是可以在Window–&gt;Preferences–&gt;General–&gt;Keys中修改的<br></li>
+<li>编辑<br><br>Ctrl+1 快速修复（最经典的快捷键,就不用多说了，可以解决很多问题，比如import类、try catch包围等）<br><br>Ctrl+Shift+F 格式化当前代码<br><br>Ctrl+Shift+M 添加类的import导入<br><br>Ctrl+Shift+O 组织类的import导入（既有Ctrl+Shift+M的作用，又可以帮你去除没用的导入，很有用）<br><br>Ctrl+Y 重做（与撤销Ctrl+Z相反）<br><br>Alt+/ 内容辅助（帮你省了多少次键盘敲打，太常用了）<br><br>Ctrl+D 删除当前行或者多行<br><br>Alt+ 当前行和下面一行交互位置（特别实用,可以省去先剪切,再粘贴了）<br><br>Alt+ 当前行和上面一行交互位置（同上）<br><br>Ctrl+Alt+ 复制当前行到下一行（复制增加）<br><br>Ctrl+Alt+ 复制当前行到上一行（复制增加）<br><br>Shift+Enter 在当前行的下一行插入空行（这时鼠标可以在当前行的任一位置,不一定是最后）<br><br>Ctrl+/ 注释当前行,再按则取消注释<br></li>
+<li>选择<br><br>Alt+Shift+ 选择封装元素<br><br>Alt+Shift+ 选择上一个元素<br><br>Alt+Shift+ 选择下一个元素<br><br>Shift+ 从光标处开始往左选择字符<br><br>Shift+ 从光标处开始往右选择字符<br><br>Ctrl+Shift+ 选中光标左边的单词<br><br>Ctrl+Shift+ 选中光标又边的单词<br></li>
+<li>移动<br><br>Ctrl+ 光标移到左边单词的开头，相当于vim的b<br><br>Ctrl+ 光标移到右边单词的末尾，相当于vim的e<br></li>
+<li>搜索<br><br>Ctrl+K 参照选中的Word快速定位到下一个（如果没有选中word，则搜索上一次使用搜索的word）<br><br>Ctrl+Shift+K 参照选中的Word快速定位到上一个<br><br>Ctrl+J 正向增量查找（按下Ctrl+J后,你所输入的每个字母编辑器都提供快速匹配定位到某个单词,如果没有,则在状态栏中显示没有找到了,查一个单词时,特别实用,要退出这个模式，按escape建）<br><br>Ctrl+Shift+J 反向增量查找（和上条相同,只不过是从后往前查）<br><br>Ctrl+Shift+U 列出所有包含字符串的行<br><br>Ctrl+H 打开搜索对话框<br><br>Ctrl+G 工作区中的声明<br><br>Ctrl+Shift+G 工作区中的引用<br></li>
+<li>导航<br><br>Ctrl+Shift+T 搜索类（包括工程和关联的第三jar包）<br><br>Ctrl+Shift+R 搜索工程中的文件<br><br>Ctrl+E 快速显示当前Editer的下拉列表（如果当前页面没有显示的用黑体表示）<br><br>F4 打开类型层次结构<br><br>F3 跳转到声明处<br><br>Alt+ 前一个编辑的页面<br><br>Alt+ 下一个编辑的页面（当然是针对上面那条来说了）<br><br>Ctrl+PageUp/PageDown 在编辑器中，切换已经打开的文件</li>
+<li>调试<br><br>F5 单步跳入<br><br>F6 单步跳过<br><br>F7 单步返回<br><br>F8 继续<br><br>Ctrl+Shift+D 显示变量的值<br><br>Ctrl+Shift+B 在当前行设置或者去掉断点<br><br>Ctrl+R 运行至行(超好用，可以节省好多的断点)<br></li>
+<li>重构<br><br>（一般重构的快捷键都是Alt+Shift开头的了）<br><br>Alt+Shift+R 重命名方法名、属性或者变量名 （是我自己最爱用的一个了,尤其是变量和类的Rename,比手工方法能节省很多劳动力）<br><br>Alt+Shift+M 把一段函数内的代码抽取成方法 （这是重构里面最常用的方法之一了,尤其是对一大堆泥团代码有用）<br><br>Alt+Shift+C 修改函数结构（比较实用,有N个函数调用了这个方法,修改一次搞定）<br><br>Alt+Shift+L 抽取本地变量（ 可以直接把一些魔法数字和字符串抽取成一个变量,尤其是多处调用的时候）<br><br>Alt+Shift+F 把Class中的local变量变为field变量 （比较实用的功能）<br><br>Alt+Shift+I 合并变量（可能这样说有点不妥Inline）<br><br>Alt+Shift+V 移动函数和变量（不怎么常用）<br><br>Alt+Shift+Z 重构的后悔药（Undo）<br></li>
+<li>其他<br><br>Alt+Enter 显示当前选择资源的属性，windows下的查看文件的属性就是这个快捷键，通常用来查看文件在windows中的实际路径<br><br>Ctrl+ 文本编辑器 上滚行<br><br>Ctrl+ 文本编辑器 下滚行<br><br>Ctrl+M 最大化当前的Edit或View （再按则反之）<br><br>Ctrl+O 快速显示 OutLine（不开Outline窗口的同学，这个快捷键是必不可少的）<br><br>Ctrl+T 快速显示当前类的继承结构<br><br>Ctrl+W 关闭当前Editer（windows下关闭打开的对话框也是这个，还有qq、旺旺、浏览器等都是）<br><br>Ctrl+L 文本编辑器 转至行<br><br>F2 显示工具提示描述<br></li>
+</ol>
+  
+	</div>
+		<footer class="article-footer clearfix">
+
+  <div class="article-tags">
+  
+  <span></span> <a href="/tags/工具使用篇/">工具使用篇</a>
+  </div>
+
+
+
+
+<div class="article-share" id="share">
+
+  <div data-url="http://dongjinglei.com/2016/11/06/eclipse磨刀指南/" data-title="eclipse磨刀指南.md | blog of dx5" data-tsina="null" class="share clearfix">
+  </div>
+
+</div>
+</footer>   	       
+	</article>
+	
+<nav class="article-nav clearfix">
+ 
+ <div class="prev" >
+ <a href="/2016/11/14/JavaScript和JQuery高度问题总结-md/" title="JavaScript和JQuery高度问题总结">
+  <strong>PREVIOUS:</strong><br/>
+  <span>
+  JavaScript和JQuery高度问题总结</span>
+</a>
+</div>
+
+
+</nav>
+
+	
+<section class="comment">
+	<div class="ds-thread"></div>
+</section>
+
+</div>  
+      <div class="openaside"><a class="navbutton" href="#" title="显示侧边栏"></a></div>
+
+  <div id="toc" class="toc-aside">
+  <strong class="toc-title">文章目录</strong>
+  <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#前言"><span class="toc-number">1.</span> <span class="toc-text">前言</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#设置篇"><span class="toc-number">2.</span> <span class="toc-text">设置篇</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#快键键篇"><span class="toc-number">3.</span> <span class="toc-text">快键键篇</span></a></li></ol>
+  </div>
+
+<div id="asidepart">
+<div class="closeaside"><a class="closebutton" href="#" title="隐藏侧边栏"></a></div>
+<aside class="clearfix">
+
+  
+
+  
+<div class="tagslist">
+	<p class="asidetitle">标签</p>
+		<ul class="clearfix">
+		
+			<li><a href="/tags/JavaScript/" title="JavaScript">JavaScript<sup>2</sup></a></li>
+		
+			<li><a href="/tags/Maven/" title="Maven">Maven<sup>2</sup></a></li>
+		
+			<li><a href="/tags/工具使用篇/" title="工具使用篇">工具使用篇<sup>1</sup></a></li>
+		
+		</ul>
+</div>
+
+
+  <div class="rsspart">
+	<a href="null" target="_blank" title="rss">RSS 订阅</a>
+</div>
+
+  
+  <div class="archiveslist">
+    <p class="asidetitle"><a href="/archives">归档</a></p>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/12/">十二月 2016</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/11/">十一月 2016</a><span class="archive-list-count">6</span></li></ul>
+  </div>
+
+
+  <div class="linkslist">
+  <p class="asidetitle">友情链接</p>
+    <ul>
+      <li><a href="http://yangjian.me" target="_blank" title="YangJian">Alimon's Blog</a></li>
+      <li><a href="http://hexo.io" target="_blank" title="Hexo">Hexo</a></li>
+    </ul>
+</div>
+
+
+</aside>
+</div>
+    </div>
+    <footer><div id="footer" >
+	
+	<div class="line">
+		<span></span>
+		<div class="author"></div>
+	</div>
+	
+	
+	<div class="social-font clearfix">
+		
+		
+		
+		<a href="https://github.com/https://github.com/dongjinglei" target="_blank" title="github"></a>
+		
+		
+		
+	</div>
+		<p class="copyright">Powered by <a href="http://hexo.io" target="_blank" title="hexo">hexo</a> and Theme by <a href="https://github.com/A-limon/pacman" target="_blank" title="Pacman">Pacman</a> © 2017 
+		
+		<a href="http://dongjinglei.com" target="_blank" title="dongjinglei">dongjinglei</a>
+		
+		</p>
+</div>
+</footer>
+    <script src="/js/jquery-2.1.0.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){ 
+  $('.navbar').click(function(){
+    $('header nav').toggleClass('shownav');
+  });
+  var myWidth = 0;
+  function getSize(){
+    if( typeof( window.innerWidth ) == 'number' ) {
+      myWidth = window.innerWidth;
+    } else if( document.documentElement && document.documentElement.clientWidth) {
+      myWidth = document.documentElement.clientWidth;
+    };
+  };
+  var m = $('#main'),
+      a = $('#asidepart'),
+      c = $('.closeaside'),
+      o = $('.openaside');
+  $(window).resize(function(){
+    getSize(); 
+    if (myWidth >= 1024) {
+      $('header nav').removeClass('shownav');
+    }else
+    {
+      m.removeClass('moveMain');
+      a.css('display', 'block').removeClass('fadeOut');
+      o.css('display', 'none');
+      
+      $('#toc.toc-aside').css('display', 'none');
+        
+    }
+  });
+  c.click(function(){
+    a.addClass('fadeOut').css('display', 'none');
+    o.css('display', 'block').addClass('fadeIn');
+    m.addClass('moveMain');
+  });
+  o.click(function(){
+    o.css('display', 'none').removeClass('beforeFadeIn');
+    a.css('display', 'block').removeClass('fadeOut').addClass('fadeIn');      
+    m.removeClass('moveMain');
+  });
+  $(window).scroll(function(){
+    o.css("top",Math.max(80,260-$(this).scrollTop()));
+  });
+});
+</script>
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  var ai = $('.article-content>iframe'),
+      ae = $('.article-content>embed'),
+      t  = $('#toc'),
+      h  = $('article h2')
+      ah = $('article h2'),
+      ta = $('#toc.toc-aside'),
+      o  = $('.openaside'),
+      c  = $('.closeaside');
+  if(ai.length>0){
+    ai.wrap('<div class="video-container" />');
+  };
+  if(ae.length>0){
+   ae.wrap('<div class="video-container" />');
+  };
+  if(ah.length==0){
+    t.css('display','none');
+  }else{
+    c.click(function(){
+      ta.css('display', 'block').addClass('fadeIn');
+    });
+    o.click(function(){
+      ta.css('display', 'none');
+    });
+    $(window).scroll(function(){
+      ta.css("top",Math.max(140,320-$(this).scrollTop()));
+    });
+  };
+});
+</script>
+
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  var $this = $('.share'),
+      url = $this.attr('data-url'),
+      encodedUrl = encodeURIComponent(url),
+      title = $this.attr('data-title'),
+      tsina = $this.attr('data-tsina');
+  var html = [
+  '<a href="#" class="overlay" id="qrcode"></a>',
+  '<div class="qrcode clearfix"><span>扫描二维码分享到微信朋友圈</span><a class="qrclose" href="#share"></a><strong>Loading...Please wait</strong><img id="qrcode-pic" data-src="http://s.jiathis.com/qrcode.php?url=' + encodedUrl + '"/></div>',
+  '<a href="#textlogo" class="article-back-to-top" title="Top"></a>',
+  '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
+  '<a href="#qrcode" class="article-share-qrcode" title="QRcode"></a>',
+  '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
+  '<a href="http://service.weibo.com/share/share.php?title='+title+'&url='+encodedUrl +'&ralateUid='+ tsina +'&searchPic=true&style=number' +'" class="article-share-weibo" target="_blank" title="Weibo"></a>',
+  '<span title="Share to"></span>'
+  ].join('');
+  $this.append(html);
+  $('.article-share-qrcode').click(function(){
+    var imgSrc = $('#qrcode-pic').attr('data-src');
+    $('#qrcode-pic').attr('src', imgSrc);
+    $('#qrcode-pic').load(function(){
+        $('.qrcode strong').text(' ');
+    });
+  });
+});     
+</script>
+
+
+<script type="text/javascript">
+  var duoshuoQuery = {short_name:"dx5"};
+  (function() {
+    var ds = document.createElement('script');
+    ds.type = 'text/javascript';ds.async = true;
+    ds.src = '//static.duoshuo.com/embed.js';
+    ds.charset = 'UTF-8';
+    (document.getElementsByTagName('head')[0] 
+    || document.getElementsByTagName('body')[0]).appendChild(ds);
+  })();
+</script> 
+
+
+
+
+
+  </body>
+</html>
